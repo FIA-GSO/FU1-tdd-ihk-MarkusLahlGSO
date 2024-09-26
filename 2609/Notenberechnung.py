@@ -26,22 +26,19 @@ def get_grade_as_text(percent: int) -> str:
     if percent < 0 or percent > 100:
         raise ValueError(" Please provide a valid percentage")
 
-    if percent >= 92 and percent <= 100:
+    if percent >= 92:
         return "sehr gut"
-    if percent >= 81 and percent <= 91:
+    if percent >= 81:
         return "gut"
-    if percent >= 67 and percent <= 80:
+    if percent >= 67:
         return "befriedigend"
-    if percent >= 50 and percent <= 66:
+    if percent >= 50:
         return "ausreichend"
-    if percent >= 30 and percent <= 49:
+    if percent >= 30:
         return "mangelhaft"
-    if percent >= 0 and percent <= 29:
-        return "ungenügend"
+    return "ungenügend"
 
-
-# print(get_grade_as_text("132"))
-
-# print(calculate_grade(-2, 0))
-
-# print(get_grade_as_text(49))
+if(__name__ == "__main__"):
+    print(get_grade_as_text("132"))
+    print(calculate_grade(-2, 0))
+    print(get_grade_as_text(49))
